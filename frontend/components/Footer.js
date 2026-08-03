@@ -1,6 +1,4 @@
-/* ==========================================================================
-   footer.js — componente reutilizable de pie de página
-   ========================================================================== */
+
 
 /**
  * Renderiza el footer dentro del contenedor indicado.
@@ -38,7 +36,7 @@ export function initFooter(selector = '#footer') {
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <span aria-hidden="true"></span>
             </a>
-            <a href="https://wa.me/50600000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <a href="https://wa.me/50687254749" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
               <span aria-hidden="true"></span>
             </a>
           </div>
@@ -46,8 +44,8 @@ export function initFooter(selector = '#footer') {
 
         <div>
           <h3 class="footer__heading">Contacto</h3>
-          <span class="footer__text">calle principal la mesa, av. central, local #42</span>
-          <span class="footer__text">+506 0000-0000</span>
+          <span class="footer__text">Cangrejal, Acosta, San José</span>
+          <span class="footer__text">+506 8725-4749</span>
           <span class="footer__text">contacto@minisuperlamesa.com</span>
           <span class="footer__text">lun - dom: 6:00 a.m. - 9:00 p.m.</span>
         </div>

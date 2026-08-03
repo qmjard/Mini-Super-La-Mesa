@@ -3,7 +3,7 @@ const MAPS_LINK = 'https://maps.app.goo.gl/eSgyD1Tdjr2q43tMA';
 
 
 const MAPS_EMBED_SRC = `https://maps.google.com/maps?q=${encodeURIComponent(DIRECCION)}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
-
+// https://maps.app.goo.gl/eSgyD1Tdjr2q43tMA
  /**
  * Renderiza la sección de ubicación dentro del contenedor indicado.
  * @param {string} selector 

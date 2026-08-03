@@ -230,8 +230,22 @@ h1, h2, h3, h4 {
   transition: background-color var(--transition-base);
 }
 
+.btn-icon img {
+  width: 18px;
+  height: 18px;
+}
+
 .btn-icon:hover {
   background-color: rgba(46, 125, 50, 0.1);
+}
+
+.btn-eliminar-fila {
+  color: var(--color-error);
+  background-color: rgba(198, 40, 40, 0.08);
+}
+
+.btn-eliminar-fila:hover {
+  background-color: rgba(198, 40, 40, 0.16);
 }
 
 /* ---------- 5. NAVBAR ---------- */

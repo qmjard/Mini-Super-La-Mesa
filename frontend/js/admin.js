@@ -130,7 +130,9 @@ function renderizarTabla(productos) {
       <td>
         <div class="admin-table__actions">
           <button class="btn btn-primary btn-guardar-fila" data-id="${producto._id}" style="padding:0.45rem 0.9rem;font-size:0.8rem;">Guardar</button>
-          <button class="btn-icon btn-eliminar-fila" data-id="${producto._id}" aria-label="Eliminar producto"></button>
+          <button type="button" class="btn-icon btn-eliminar-fila" data-id="${producto._id}" aria-label="Eliminar producto">
+            <img src="assets/icon-trash.svg" alt="" aria-hidden="true" />
+          </button>
         </div>
       </td>
     </tr>`

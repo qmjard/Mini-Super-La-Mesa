@@ -235,6 +235,17 @@ h1, h2, h3, h4 {
   background-color: rgba(46, 125, 50, 0.1);
 }
 
+.btn-danger {
+  background-color: #dc3545; /* Rojo estándar de peligro */
+  color: var(--color-white);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-danger:hover {
+  background-color: #b02a37;
+  box-shadow: var(--shadow-md);
+}
+
 /* ---------- 5. NAVBAR ---------- */
 .navbar {
   position: fixed;

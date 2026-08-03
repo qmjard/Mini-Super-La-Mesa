@@ -181,10 +181,11 @@ function confirmarEliminacion(id) {
       <button class="modal__close" data-modal-close aria-label="Cerrar">x</button>
     </div>
     <p>¿Seguro que deseas eliminar <strong>${producto?.nombre || 'este producto'}</strong> del inventario?</p>
-    <div style="display:flex;gap:0.6rem;margin-top:1rem;">
-      <button class="btn btn-outline btn-block" data-modal-close>Cancelar</button>
-      <button class="btn btn-danger btn-block" id="btn-confirmar-eliminar" style="background-color: #dc3545; color: #ffffff; border: none; padding: 0.6rem 1rem; border-radius: 4px; cursor: pointer;">Eliminar</button>
-    </div>
+    // ... dentro de la función confirmarEliminacion
+<div style="display:flex;gap:0.6rem;">
+  <button class="btn btn-outline btn-block" data-modal-close>Cancelar</button>
+  <button class="btn btn-danger btn-block" id="btn-confirmar-eliminar">Eliminar</button>
+</div>
   `);
 
   overlay.querySelector('#btn-confirmar-eliminar').addEventListener('click', async () => {

@@ -1,14 +1,12 @@
-/* ==========================================================================
-   locationsection.js — componente reutilizable de ubicación
-   ========================================================================== */
+const DIRECCION = 'Cangrejal, Acosta, San José';
+const MAPS_LINK = 'https://maps.app.goo.gl/eSgyD1Tdjr2q43tMA';
 
-const DIRECCION = 'Calle Principal La Mesa, Av. Central, Local #42';
-const MAPS_EMBED_SRC =
-  'https://www.google.com/maps?q=' + encodeURIComponent(DIRECCION) + '&output=embed';
 
-/**
+const MAPS_EMBED_SRC = `https://maps.google.com/maps?q=${encodeURIComponent(DIRECCION)}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
+
+ /**
  * Renderiza la sección de ubicación dentro del contenedor indicado.
- * @param {string} selector - Selector del contenedor destino.
+ * @param {string} selector 
  */
 export function initLocationSection(selector = '#ubicacion') {
   const contenedor = document.querySelector(selector);
@@ -48,7 +46,7 @@ export function initLocationSection(selector = '#ubicacion') {
 
           <a
             class="btn btn-primary btn-block"
-            href="https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(DIRECCION)}"
+            href="${MAPS_LINK}"
             target="_blank"
             rel="noopener noreferrer"
           >

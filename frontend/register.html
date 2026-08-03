@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crear cuenta — Minisuper La Mesa</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="assets/logosuper.png" />
+  <script src="js/config.js"></script>
+</head>
+<body>
+  <header id="navbar"></header>
+
+  <main class="auth-page">
+    <div class="auth-card">
+      <div class="auth-card__header">
+        <img src="assets/logosuper.png" alt="Logo Minisuper La Mesa" class="auth-card__logo" onerror="this.onerror=null;this.src='https://via.placeholder.com/80x80.png?text=LM';" />
+        <h1 class="auth-card__title">Crea tu cuenta</h1>
+        <p class="auth-card__subtitle">Regístrate y disfruta de la frescura de La Mesa</p>
+      </div>
+
+      <form id="form-registro" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="registro-nombre">Nombre completo</label>
+          <input
+            class="form-input"
+            type="text"
+            id="registro-nombre"
+            name="nombre"
+            placeholder="Ej. Don Mario Rodríguez"
+            required
+          />
+          <div class="form-error" data-error-for="nombre"></div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="registro-email">Correo electrónico</label>
+          <input
+            class="form-input"
+            type="email"
+            id="registro-email"
+            name="email"
+            placeholder="tucorreo@ejemplo.com"
+            required
+          />
+          <div class="form-error" data-error-for="email"></div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="registro-password">Contraseña</label>
+          <div class="form-input-wrap">
+            <input
+              class="form-input"
+              type="password"
+              id="registro-password"
+              name="password"
+              placeholder="Mínimo 6 caracteres"
+              minlength="6"
+              required
+            />
+            <button type="button" class="password-toggle" aria-label="Mostrar contraseña"><img src="assets/icon-eye-closed.svg" alt="" aria-hidden="true" /></button>
+          </div>
+          <div class="form-error" data-error-for="password"></div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="registro-confirmar">Confirmar contraseña</label>
+          <div class="form-input-wrap">
+            <input
+              class="form-input"
+              type="password"
+              id="registro-confirmar"
+              name="confirmarPassword"
+              placeholder="Repite tu contraseña"
+              minlength="6"
+              required
+            />
+            <button type="button" class="password-toggle" aria-label="Mostrar contraseña"><img src="assets/icon-eye-closed.svg" alt="" aria-hidden="true" /></button>
+          </div>
+          <div class="form-error" data-error-for="confirmarPassword"></div>
+        </div>
+
+        <button type="submit" class="btn btn-secondary btn-block">Crear cuenta</button>
+      </form>
+
+      <p class="auth-card__footer">
+        ¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a>
+      </p>
+    </div>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <script type="module">
+    import { initNavbar } from './components/Navbar.js';
+    import { initFooter } from './components/Footer.js';
+    initNavbar('#navbar', { onLoginClick: () => (window.location.href = 'login.html') });
+    initFooter('#footer');
+  </script>
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>

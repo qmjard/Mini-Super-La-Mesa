@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minisuper La Mesa — Calidad y frescura al alcance de tu mesa</title>
+  <meta
+    name="description"
+    content="Minisuper La Mesa: productos frescos, abarrotes y más, a un clic de tu mesa."
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="assets/logosuper.png" />
+  <script src="js/config.js"></script>
+</head>
+<body>
+  <header id="navbar"></header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="container hero__inner">
+        <h1 class="hero__title">Calidad y <span>frescura</span><br />al alcance de tu mesa</h1>
+        <p class="hero__subtitle">
+          Frutas, verduras, carnes y abarrotes seleccionados cada día para tu hogar.
+        </p>
+        <a href="#productos" class="btn btn-secondary">Ver productos</a>
+      </div>
+      <div class="hero__wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+          <path fill="#F9F9F9" d="M0,32 C240,64 480,0 720,16 C960,32 1200,64 1440,32 L1440,60 L0,60 Z"></path>
+        </svg>
+      </div>
+    </section>
+
+    <section id="productos" class="products-section">
+      <div class="container">
+        <h2 class="section-title">Nuestros productos</h2>
+        <p class="section-subtitle">Frescura garantizada, todos los días del año.</p>
+
+        <div class="products-toolbar">
+          <input
+            type="search"
+            id="input-buscar"
+            placeholder="Buscar producto..."
+            aria-label="Buscar producto"
+          />
+          <select id="select-categoria" aria-label="Filtrar por categoría">
+            <option value="">Todas las categorías</option>
+            <option value="Frutas y Verduras">Frutas y Verduras</option>
+            <option value="Lácteos">Lácteos</option>
+            <option value="Carnes">Carnes</option>
+            <option value="Panadería">Panadería</option>
+            <option value="Abarrotes">Abarrotes</option>
+            <option value="Bebidas">Bebidas</option>
+            <option value="Limpieza">Limpieza</option>
+            <option value="Otros">Otros</option>
+          </select>
+        </div>
+
+        <div id="productos-grid" class="products-grid"></div>
+      </div>
+    </section>
+
+    <section id="ubicacion"></section>
+
+    <section id="contacto"></section>
+  </main>
+
+  <footer id="footer"></footer>
+  <script type="module">
+    import { initNavbar } from './components/Navbar.js';
+    import { initFooter } from './components/Footer.js';
+    initNavbar('#navbar', { onLoginClick: () => {} });
+    initFooter('#footer');
+  </script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

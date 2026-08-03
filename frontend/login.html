@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar sesión — Minisuper La Mesa</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="assets/logosuper.png" />
+  <script src="js/config.js"></script>
+</head>
+<body>
+  <header id="navbar"></header>
+
+  <main class="auth-page">
+    <div class="auth-card">
+      <div class="auth-card__header">
+        <img src="assets/logosuper.png" alt="Logo Minisuper La Mesa" class="auth-card__logo" onerror="this.onerror=null;this.src='https://via.placeholder.com/80x80.png?text=LM';" />
+        <h1 class="auth-card__title">Bienvenido de nuevo</h1>
+        <p class="auth-card__subtitle">Inicia sesión para continuar tu compra</p>
+      </div>
+
+      <form id="form-login" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="login-email">Correo electrónico</label>
+          <input
+            class="form-input"
+            type="email"
+            id="login-email"
+            name="email"
+            placeholder="tucorreo@ejemplo.com"
+            required
+          />
+          <div class="form-error" data-error-for="email"></div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="login-password">Contraseña</label>
+          <div class="form-input-wrap">
+            <input
+              class="form-input"
+              type="password"
+              id="login-password"
+              name="password"
+              placeholder="••••••••"
+              minlength="6"
+              required
+            />
+            <button type="button" class="password-toggle" aria-label="Mostrar contraseña"><img src="assets/icon-eye-closed.svg" alt="" aria-hidden="true" /></button>
+          </div>
+          <div class="form-error" data-error-for="password"></div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Iniciar sesión</button>
+      </form>
+
+      <p class="auth-card__footer">
+        ¿No tienes cuenta? <a href="register.html">Regístrate aquí</a>
+      </p>
+    </div>
+  </main>
+
+  <footer id="footer"></footer>
+
+  <script type="module">
+    import { initNavbar } from './components/Navbar.js';
+    import { initFooter } from './components/Footer.js';
+    initNavbar('#navbar', { onLoginClick: () => {} });
+    initFooter('#footer');
+  </script>
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>

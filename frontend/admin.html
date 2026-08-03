@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel de Administración — Minisuper La Mesa</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="assets/logosuper.png" />
+  <script src="js/config.js"></script>
+</head>
+<body>
+  <header id="navbar"></header>
+
+  <div id="admin-root">
+    <main class="admin-page">
+      <div class="container" id="admin-content" hidden>
+        <div class="admin-header">
+          <div>
+            <h1 class="section-title" style="margin-bottom:0.2rem;">Panel de Inventario</h1>
+            <p class="section-subtitle" style="margin-bottom:0;">
+              Gestiona productos, precios y stock en tiempo real.
+            </p>
+          </div>
+        </div>
+
+        <div class="admin-stats">
+          <div class="admin-stat-card">
+            <div class="admin-stat-card__value" id="stat-total-productos">0</div>
+            <div class="admin-stat-card__label">Productos activos</div>
+          </div>
+          <div class="admin-stat-card">
+            <div class="admin-stat-card__value" id="stat-stock-total">0</div>
+            <div class="admin-stat-card__label">Unidades en stock</div>
+          </div>
+          <div class="admin-stat-card">
+            <div class="admin-stat-card__value" id="stat-valor-inventario">₡0</div>
+            <div class="admin-stat-card__label">Valor del inventario</div>
+          </div>
+          <div class="admin-stat-card">
+            <div class="admin-stat-card__value" id="stat-sin-stock">0</div>
+            <div class="admin-stat-card__label">Agotados</div>
+          </div>
+        </div>
+
+        <section style="margin-bottom: var(--space-lg);">
+          <h2 class="section-title" style="font-size:1.15rem;">Agregar nuevo producto</h2>
+          <form id="form-nuevo-producto" class="admin-table-wrap" style="padding: var(--space-md); display:grid; gap: var(--space-sm); grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+            <div class="form-group" style="margin-bottom:0;">
+              <label class="form-label" for="nuevo-nombre">Nombre</label>
+              <input class="form-input" type="text" id="nuevo-nombre" name="nombre" placeholder="Ej. Tomate perita" required />
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label class="form-label" for="nuevo-categoria">Categoría</label>
+              <select class="form-input" id="nuevo-categoria" name="categoria" required></select>
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label class="form-label" for="nuevo-precio">Precio (₡)</label>
+              <input class="form-input" type="number" id="nuevo-precio" name="precio" min="0" step="1" required />
+            </div>
+            <div class="form-group" style="margin-bottom:0;">
+              <label class="form-label" for="nuevo-stock">Stock inicial</label>
+              <input class="form-input" type="number" id="nuevo-stock" name="stock" min="0" step="1" required />
+            </div>
+            <div class="form-group" style="margin-bottom:0; grid-column: span 2;">
+              <label class="form-label" for="nuevo-imagen">URL de imagen (opcional)</label>
+              <input class="form-input" type="url" id="nuevo-imagen" name="imagenUrl" placeholder="https://..." />
+            </div>
+            <div class="form-group" style="margin-bottom:0; grid-column: 1 / -1;">
+              <label class="form-label" for="nuevo-descripcion">Descripción (opcional)</label>
+              <input class="form-input" type="text" id="nuevo-descripcion" name="descripcion" placeholder="Breve descripción del producto" />
+            </div>
+            <div style="grid-column: 1 / -1;">
+              <button type="submit" class="btn btn-secondary">+ Agregar producto</button>
+            </div>
+          </form>
+        </section>
+
+        <section>
+          <h2 class="section-title" style="font-size:1.15rem;">Inventario actual</h2>
+          <p class="section-subtitle">Edita precio o stock y presiona "Guardar" en la fila correspondiente.</p>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Producto</th>
+                  <th>Precio</th>
+                  <th>Stock</th>
+                  <th>Estado</th>
+                  <th>Valor total</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="tabla-inventario-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <footer id="footer"></footer>
+  <script type="module">
+    import { initNavbar } from './components/Navbar.js';
+    import { initFooter } from './components/Footer.js';
+    initNavbar('#navbar', { onLoginClick: () => {} });
+    initFooter('#footer');
+  </script>
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

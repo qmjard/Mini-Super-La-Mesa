@@ -30,14 +30,22 @@ export function initFooter(selector = '#footer') {
             tu hogar.
           </p>
           <div class="footer__social">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-              <span aria-hidden="true"></span>
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-              <span aria-hidden="true"></span>
-            </a>
-            <a href="https://wa.me/50687254749" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-              <span aria-hidden="true"></span>
+<div class="social-links">
+  <!-- Facebook -->
+  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+    <i class="fab fa-instagram" aria-hidden="true"></i>
+  </a>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/50687254749" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+</div>
             </a>
           </div>
         </div>

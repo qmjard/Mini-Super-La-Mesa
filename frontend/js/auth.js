@@ -1,7 +1,4 @@
-/* ==========================================================================
-   auth.js — lógica de login y registro
-   validaciones visuales en tiempo real + integración con /api/auth
-   ========================================================================== */
+
 
 import { iniciarSesion, registrarUsuario } from './api.js';
 import { guardarSesion, estaAutenticado } from './session.js';

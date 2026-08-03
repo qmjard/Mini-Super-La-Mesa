@@ -1,6 +1,4 @@
-/* ==========================================================================
-   admin.js — panel de gestión de inventario
-   ========================================================================== */
+
 
 import { initNavbar } from '../components/Navbar.js';
 import { initFooter } from '../components/Footer.js';

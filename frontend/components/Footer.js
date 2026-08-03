@@ -1,8 +1,8 @@
 
 
 /**
- * Renderiza el footer dentro del contenedor indicado.
- * @param {string} selector - Selector del contenedor destino.
+ * Renderiza 
+ * @param {string} selector 
  */
 export function initFooter(selector = '#footer') {
   const contenedor = document.querySelector(selector);

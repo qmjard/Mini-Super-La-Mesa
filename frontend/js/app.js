@@ -1,7 +1,3 @@
-/* ==========================================================================
-   app.js — lógica de la página principal
-   catálogo interactivo + carrito + checkout
-   ========================================================================== */
 
 import { initNavbar } from '../components/Navbar.js';
 import { initFooter } from '../components/Footer.js';

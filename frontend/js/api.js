@@ -1,6 +1,4 @@
-/* ==========================================================================
-   api.js — Cliente Fetch API hacia el backend Minisuper La Mesa
-   ========================================================================== */
+
 
 import { obtenerToken } from './session.js';
 

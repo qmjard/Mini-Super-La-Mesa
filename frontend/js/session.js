@@ -1,6 +1,3 @@
-/* ==========================================================================
-   session.js — Almacenamiento de sesión (token JWT + datos de usuario)
-   ========================================================================== */
 
 const TOKEN_KEY = 'minisuper_token';
 const USER_KEY = 'minisuper_usuario';

@@ -1,6 +1,3 @@
-/* ==========================================================================
-   cart.js — Estado del carrito de compras (localStorage + eventos)
-   ========================================================================== */
 
 const CART_KEY = 'minisuper_carrito';
 

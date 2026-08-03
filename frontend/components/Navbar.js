@@ -1,6 +1,3 @@
-/* ==========================================================================
-   navbar.js — componente reutilizable de navegación
-   ========================================================================== */
 
 import { obtenerCantidadTotal } from '../js/cart.js';
 import { estaAutenticado, obtenerUsuario, cerrarSesion, esAdmin } from '../js/session.js';

@@ -1,6 +1,4 @@
-/* ==========================================================================
-   productcard.js — componente reutilizable de tarjeta de producto
-   ========================================================================== */
+
 
 import { agregarAlCarrito, obtenerItems } from '../js/cart.js';
 

@@ -1,8 +1,8 @@
 /* ==========================================================================
-   api.js — cliente fetch api hacia el backend minisuper la mesa
+   api.js — Cliente Fetch API hacia el backend Minisuper La Mesa
    ========================================================================== */
 
-import { obtenerToken } from './auth.js';
+import { obtenerToken } from './session.js';
 
 const API_BASE_URL = window.MINISUPER_API_URL || 'http://localhost:5000/api';
 

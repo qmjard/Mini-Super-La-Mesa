@@ -11,5 +11,5 @@
 
   window.MINISUPER_API_URL = esLocal
     ? 'http://localhost:5000/api'
-    : 'https://minisuper-la-mesa-api.onrender.com/api'; // <-- reemplazar con la URL real de Render
-})();
+    : 'https://mini-super-la-mesa.onrender.com/api'; // URL del backend en render.com arregladooooooooooo
+})();  

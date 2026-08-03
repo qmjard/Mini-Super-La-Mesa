@@ -5,12 +5,17 @@
 import { obtenerCantidadTotal } from '../js/cart.js';
 import { estaAutenticado, obtenerUsuario, cerrarSesion, esAdmin } from '../js/session.js';
 
-const ENLACES = [
-  { texto: 'Inicio', href: '#inicio' },
-  { texto: 'Productos', href: '#productos' },
-  { texto: 'Ubicación', href: '#ubicacion' },
-  { texto: 'Contacto', href: '#contacto' },
-];
+function obtenerEnlaces() {
+  const enIndex = /(^|\/)(index\.html)?$/.test(window.location.pathname);
+  const prefijo = enIndex ? '' : 'index.html';
+  return [
+    { texto: 'Inicio', href: `${prefijo}#inicio` },
+    { texto: 'Productos', href: `${prefijo}#productos` },
+    { texto: 'Ubicación', href: `${prefijo}#ubicacion` },
+    { texto: 'Contacto', href: `${prefijo}#contacto` },
+  ];
+}
+
 
 /**
  * Renderiza el navbar dentro del contenedor indicado.
@@ -104,7 +109,7 @@ export function initNavbar(selector = '#navbar', opciones = {}) {
 }
 
 function renderMarkup() {
-  const enlacesHtml = ENLACES.map(
+  const enlacesHtml = obtenerEnlaces().map(
     (enlace) => `<li><a href="${enlace.href}" class="navbar__link">${enlace.texto}</a></li>`
   ).join('');
 

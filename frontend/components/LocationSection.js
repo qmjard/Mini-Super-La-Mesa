@@ -40,7 +40,7 @@ export function initLocationSection(selector = '#ubicacion') {
             <span class="location-card__icon" aria-hidden="true"></span>
             <div>
               <span class="location-card__label">Teléfono</span>
-              <p class="location-card__value">+506 0000-0000</p>
+              <p class="location-card__value">+506 8725-4749</p>
             </div>
           </div>
 

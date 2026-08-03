@@ -181,11 +181,12 @@ function confirmarEliminacion(id) {
       <button class="modal__close" data-modal-close aria-label="Cerrar">x</button>
     </div>
     <p>¿Seguro que deseas eliminar <strong>${producto?.nombre || 'este producto'}</strong> del inventario?</p>
-    // ... dentro de la función confirmarEliminacion
-<div style="display:flex;gap:0.6rem;">
-  <button class="btn btn-outline btn-block" data-modal-close>Cancelar</button>
-  <button class="btn btn-danger btn-block" id="btn-confirmar-eliminar">Eliminar</button>
-</div>
+    <div style="display:flex; gap:0.6rem; margin-top:1rem; width:100%;">
+      <button class="btn btn-outline btn-block" data-modal-close style="flex:1;">Cancelar</button>
+      <button class="btn btn-block" id="btn-confirmar-eliminar" style="flex:1; background-color: #dc3545 !important; color: #ffffff !important; border: none !important; opacity: 1 !important; visibility: visible !important;">
+        Eliminar
+      </button>
+    </div>
   `);
 
   overlay.querySelector('#btn-confirmar-eliminar').addEventListener('click', async () => {
@@ -199,7 +200,6 @@ function confirmarEliminacion(id) {
     }
   });
 }
-
 /* ---------- Formulario: agregar nuevo producto ---------- */
 function configurarFormularioNuevoProducto() {
   const form = document.querySelector('#form-nuevo-producto');
